@@ -5,6 +5,7 @@
 body {
     margin: 0;
     padding-top: 74px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
 .header{
     background-color: beige;
@@ -14,11 +15,8 @@ body {
     left: 0;
     top: 0;
     z-index: 9999;
-    
-
+     
 }
-
-
 .search {
     position: relative;
     width: 100%;
@@ -49,21 +47,41 @@ body {
     padding-top: 10;
     text-align: right;
 }
-.nav__item{
-    color: blue;
+.nav__item {
+    color: rgb(170, 140, 19);
     text-decoration: none;
-    margin: 0px 5px;
+    margin: 0 5px;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
 }
-.nav__item:hover{
-    transition: 0.3s;
+
+
+.nav__item::before {
+    content: "🐦‍⬛";
+    opacity: 0;                
+    display: inline-block;
+    width: 1.2em;              
+    margin-right: 5px;
+    transition: opacity 0.3s ease;
+}
+
+
+.nav__item:hover::before {
+    opacity: 1;
+}
+
+.nav__item:hover {
     color: blueviolet;
 }
+
 .hero{
     background-image: url(https://picsum.photos/1000/1000);
     background-size: cover;
     background-repeat: no-repeat;
     padding: 10px 0 30px 0;
     position: relative;
+    color: white;
 }
 .hero__button-wrapper{
     width: 100%;
@@ -75,7 +93,19 @@ body {
     padding: 10px 25px;
     text-decoration: none;
     color: white;
-    background-color: orange; 
+    background-color: orange;
+    border-radius: 10px; 
+    font-weight: bold;
+    
+}
+.hero__button:hover{
+    transition: 0.3s;
+    margin: 10px 0 0 20px;
+    padding: 10px 25px;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(255, 140, 0);
+    border-radius: 10px;
 }
 .hero__button:first-child{
     margin-left: 0;
@@ -92,5 +122,29 @@ body {
 }
 .hero__content{
     position: relative;
-    z-index: ;
+    z-index: 2;  
+}
+.new{
+    padding: 25px 0 25px 0;
+    
+}
+.new__text{
+    margin: 10px 0;
+}
+.news__read-more-wrapper{
+    width: 100%;
+    text-align: right;
+    
+}
+.news__read-more{
+    color: tomato;
+    text-decoration: none;
+}
+.news__read-more:hover{
+    transition: 2s;
+    color: darkorange;
+}
+.banner{
+    background-color: darkkhaki;
+    padding: 10px 0px 40px 0px;
 }

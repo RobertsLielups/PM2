@@ -5,7 +5,7 @@
 body {
     margin: 0;
     padding-top: 74px;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+    font-family:'Nunito', sans-serif
 }
 .header{
     background-color: beige;
@@ -147,4 +147,70 @@ body {
 .banner{
     background-color: darkkhaki;
     padding: 10px 0px 40px 0px;
+}
+.slider{
+    width: 100%;
+    position: relative;
+    
+}
+.slider_image{
+    width: 100%;
+    height: 400px;
+    color: black;
+}
+.slider__prev, .slider__next{
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+     top: calc(50% - 15%);
+    line-height: 1;
+}
+
+
+.slider__prev{
+left: -20px;
+
+}
+.slider__next{
+right: -20px;
+
+}
+.slider_dots{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    z-index: 2;
+}
+.slider_dot{
+    width: 20px;
+    height: 20px;
+    border: 2px solid blue;
+    display:inline-block ;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.slider_dot:hover, .slider_dot.active{
+    background-color: blue;
+    transition: background-color 0.2s;
+}
+.slider__prev:hover, .slider__next:hover{
+    transition: color 0.2s;
+    color: blue;
+    cursor: pointer;
+}
+.content_list{
+    list-style-type: square;
+}
+.content{
+    color: black;
+}
+.content_table{
+    border: 2px solid blue;
+    
+}
+.content_table th, .content_table td{
+    border: 2px solid blue;
+    padding: 10px;
 }
